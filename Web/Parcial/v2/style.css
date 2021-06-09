@@ -1,0 +1,226 @@
+
+#div1{
+  margin: 0em 5em 5em 5em;
+  padding: 3rem 4rem 5rem 4rem;
+  text-align: center;
+  border: 3px  #f6f6f6 solid;
+  border-radius: 20px;
+}
+
+table{
+  margin: auto;
+  padding: auto;
+   background-color: #7a7a7a;
+    border-top: 4px #bba8da solid;
+    color:  #ffffff;
+    border-spacing: 0px;
+       
+}
+
+
+th{
+height:50;
+width: 130;
+padding: 1% 0% 2% 0%;
+background-color:#121e63;
+border-bottom: 3px solid #ffffff;
+}
+
+td{
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #ffffff;
+}
+
+
+
+.tr:hover{
+  background-color:#b8b7b7;
+  color: #535353;
+}
+
+h1{
+  padding: 3% 0% 1% 0%;
+text-align: center;
+}
+
+.editar{
+  color: #ff7301f6;
+  cursor: pointer;
+}
+
+span{
+  margin: 0;
+  color: #c2c2c2;
+}
+
+#span{
+  margin: 0;
+  color: #ff0000;
+}
+
+
+input{
+  border: none;
+  width: 150px;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+}
+
+
+input:focus{
+border-bottom: 4px solid #00ff00;
+
+}
+
+.div1{
+  margin-top: 30px;
+  
+}
+
+.div2,.div3{
+  display: inline-block;
+  margin-top: 20px;  
+  margin-left: 40px;
+
+}
+
+button{
+  border-radius: 10px;
+  width: 100px;
+  height: 35px;
+  background: #ffffff;
+  margin-top: 30px;
+  margin-right: 25px;
+}
+
+#aceptar{
+  border: 2px solid #006eff;
+  color: #006eff;
+}
+
+#aceptar:hover{
+
+  background-color:006eff ;
+  color: #ffffff;
+}
+
+#cancelar{
+  border: 2px solid #f13325;
+  color: #f13325;
+}
+
+#cancelar:hover{
+
+  background-color:#f13325 ;
+  color: #ffffff;
+}
+
+.container{
+  margin: auto;
+  text-align: center;
+  height: 35rem;
+  width: 25rem;
+ 
+}
+
+.divss{
+  border: 2px solid #d1d1d1;
+  background-color:#f5f5f5;
+  margin: none;
+  height: 12%;  
+  text-align: left;
+}
+
+#alimento{
+  background-color: #00aebb;
+  height: 35%;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  
+}
+
+#calorias{
+  border: 2px solid #d1d1d1;
+  background-color:#f5f5f5;
+  margin: none;
+  height: 12%;  
+  text-align: left;
+
+
+}
+
+#carbohidrato{
+  border-bottom-left-radius:15px ;
+ border-bottom-right-radius:15px ;
+}
+
+h3{
+  padding-left: 25px;
+  color: #079cff;
+  font-size:  23px;
+  display: inline-block;
+}
+
+.spanx{
+  color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+
+
+#caloria{
+  margin-left: 100px;
+  background-color: #0000ff;
+}
+
+#grasa{
+  margin-left: 160px;
+  background-color: #00aebb;
+}
+
+#proteinas{
+  margin-left: 140px;
+  background-color: #0c810c;
+}
+
+#carbohidratos{
+  margin-left: 60px;
+  background-color: #ff0000;
+
+}
+#titulo{
+  color: #ffffff;
+  display: inline-block;
+  position: relative;
+  left: 35%;
+  bottom: 75%;
+  font-size: 30px;
+}
+
+.alimentoss{
+  color: #ffffff;
+  display: inline-block;
+  position: relative;
+  left: 6%;
+  bottom: 58%;
+  font-size: 18px;
+}
+
+.bien{
+  width: 30px;
+}
+
+#imagen{
+  height: 100%;
+  width: 50%;
+  border-radius: 100%;
+}
+
+#mal{
+  width: 90%;
+}

@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <h1>Tabla de Contenido</h1>
+    <div id="div1">
+    <form action="Recivido.html" method="get">
+<table>
+    
+    <thead >
+        <th>Alimento</th>
+        <th>Calorías (kCal)</th>
+        <th>Grasas <br> (g)</th>
+        <th>Proteína <br>(g) </th>
+        <th>Carbohidratos <br> (g) </th>
+        <th>Ok</th>
+        <th>Opciones    </th>
+    </thead>
+
+    <tbody>
+    <tr class="tr">
+        <td class="alimento">Arándano</td>
+        <td>49</td>
+        <td>0.2</td>
+        <td>0.4</td>
+        <td>12.7</td>
+        <td><div class="icon"><img class="mal" src="icon/iconfinder_icon-57-sad-face_315570.svg"></div></td>
+        <td class="editar" onclick="editar(this)">Editar</td>
+    </tr>
+    <tr class="tr">
+        <td class="alimento">Plátano</td>
+        <td>90</td>
+        <td>0.3</td>
+        <td>1.0</td>
+        <td>23.5</td>
+        <td><div class="icon"><img class="bien" src="icon/iconfinder_simpline_60_2305602.svg"></div></td>
+        <td class="editar" onclick="editar(this)">Editar</td>
+    </tr>
+    <tr class="tr">
+        <td class="alimento">Cereza</td>
+        <td>46</td>
+        <td>0.4</td>
+        <td>0.9</td>
+        <td>10.9</td>
+        <td><div class="icon"><img class="mal" src="icon/iconfinder_icon-57-sad-face_315570.svg"></div></td>
+        <td class="editar" onclick="editar(this)">Editar</td>
+    </tr>
+    <tr class="tr">
+        <td class="alimento">Fresa</td>
+        <td>37</td>
+        <td>0.5</td>
+        <td>0.8</td>
+        <td>8.3</td>
+        <td ><div class="icon"><img class="bien" src="icon/iconfinder_simpline_60_2305602.svg"></div></td>
+        <td class="editar" onclick="editar(this)">Editar</td>
+    </tr>
+    </tbody>
+  </table>
+<br>
+<span id="span"> Contenido nutricional cada 100 g de alimento</span>
+
+<div class="div2" ></div>
+<div id="formulario"></div>
+<div class="div4"></div>
+</div>
+
+</form>
+
+</body>
+<script src="script.js"></script>
+</html>

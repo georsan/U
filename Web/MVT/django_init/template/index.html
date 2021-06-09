@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  
+    <title>{%block titulo %}CRUD{%endblock titulo %}</title>
+</head>
+<body>
+    {%block body %}
+
+  <div>
+    <span class="blue-text text-darken-2"><h1>CRUD EN DJANGO</h1>
+    </span>
+  </div>
+        <table>
+        <thead>
+            <tr>
+                <th>Id</th> 
+               <th>Nombre</th> 
+               <th>Apellidos</th> 
+               <th>Tipo de documento</th> 
+               <th>Documento</th> 
+               <th>Lugar de residencia</th> 
+               <th>Email</th> 
+               <th>Telefono</th> 
+               <th>Usuario</th> 
+               <th>Password</th>
+               <th>Opciones</th>
+            </tr>
+            <tbody>
+                {%for persona in personas%}
+                <tr>
+                    <td>{{persona.id}}</td>
+                    <td>{{persona.nombre}}</td>
+                    <td>{{persona.apellidos}}</td>
+                    <td>{{persona.idtipodocumento.nombre}}</td>
+                    <td>{{persona.documento}}</td>
+                    <td>{{persona.lugarresidencia.nombre}}</td>
+                    <td>{{persona.email}}</td>
+                    <td>{{persona.telefono}}</td>
+                    <td>{{persona.usuario}}</td>
+                    <td>{{persona.password}}</td>
+                    <td ><a href="{%url 'editar_persona' persona.id%}">Editar</a> <a href="{%url 'eliminar_persona' persona.id%}">Eliminar</a></td>
+                    
+                    
+                </tr>
+                {%endfor%}
+            </tbody>
+        </thead>
+    </table>
+    {%endblock body %}
+</body>
+
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

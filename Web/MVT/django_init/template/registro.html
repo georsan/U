@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block titulo %}CRUD{% endblock titulo %}
+
+{% block body %}
+<form method="POST">
+  <div class="container">
+   {%csrf_token%} 
+ {{formu.as_p}}
+<button type="submit">Crear</button>
+</div>
+
+</form>
+ 
+{%endblock body %}

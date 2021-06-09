@@ -1,0 +1,76 @@
+body{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+h1{
+text-align: center;
+margin-top: 100px;   
+    color: white;
+    padding: 20px;
+}
+
+#contenedor{
+    margin: 0;
+    
+    
+}
+
+#contenedor-form{
+  text-align: center;
+    background-color:#7d8385;
+    margin-top: 200px ;
+margin-left: 400px;
+margin-right:400px;
+margin-bottom: 200px;
+
+}
+
+input{
+color: white;
+display: block;
+margin: auto;
+border: none;
+background: transparent;
+margin-top: 30px;
+width: 50%;
+margin-bottom:20px;
+}
+
+input:focus{
+   background: #2C5364; 
+}
+
+h5{
+color: white;
+    display: inline; 
+}
+
+#XDD{
+  display: block;
+    margin-left:1px;
+    margin-right: 110px;
+}
+#a{
+display: inline;
+align-items: center;
+margin-left: 5%;
+}
+#date{
+    display: inline;
+    width: 25%;   
+    border: none;     
+}
+
+select{
+    display: inline;
+    align-content: center;
+    border: none;
+    
+    
+}
+
+#btt{
+  margin-top: 20px;
+}

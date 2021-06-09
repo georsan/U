@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Persona</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-wrapper grey darken-4">
+          <a href="#" class="brand-logo">SPA</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Persona</a></li>
+            <li><a href="/ciudad">Ciudad</a></li>
+            <li><a href="/documento">Documento</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container ">
+          <h3>Lista de persona</h3>
+          <a class="btn-floating  waves-effect waves-light red" (click)='nuevaper()'><i class="material-icons">add</i></a>
+      <table class="highlight">
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>CIUDAD</th>
+            <th>DOCUMENTO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let per of personas" (click)='editarpers(per.id)' >
+            <td>{{per.id}}</td>
+            <td>{{per.nombre}}</td>
+            <td>{{per.apellidos}}</td>
+            <td>{{per.idtipociu}}</td>
+            <td>{{per.documento}}</td>
+        </tbody>
+    </table>
+</div>  
+      
+</body>
+</html>

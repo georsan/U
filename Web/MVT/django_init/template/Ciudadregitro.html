@@ -1,0 +1,11 @@
+{% extends 'ciudades.html' %}
+{% block titulo %}CRUD{% endblock titulo %}
+
+{% block body %}
+<form method="POST">
+   {%csrf_token%} 
+ {{formula.as_p}}
+<button type="submit">Crear</button>
+</form>
+ 
+{%endblock body %}

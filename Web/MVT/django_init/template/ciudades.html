@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>{%block titulo %}CRUD{%endblock titulo %}</title>
+</head>
+<body>
+    <div class="container">
+    {% block body %}
+    <table>
+       <thead>
+          <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Opciones</th>
+          </tr> 
+       </thead>
+    <tbody>
+        {%for ciuda in ciudades%}
+        <tr>
+           <td>{{ciuda.id}}</td>
+           <td>{{ciuda.nombre}}</td>
+           <td> <a href="% url 'editarciudad' ciudad.id %">Eliminar</a> <a href="{% url 'eliminarciudad' ciuda.id  %}">Eliminar</a></td>
+        </tr>
+        {%endfor%}
+    </tbody>   
+    </table>
+    {% endblock body %}
+</div>
+</body>
+
+
+</html>

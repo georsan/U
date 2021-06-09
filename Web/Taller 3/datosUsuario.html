@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title> Datos usuario </title>
+
+  </head>
+
+  <body>
+
+    <h3> Rellena tu CV </h3>
+    <form class="" action="index.html" method="post">
+
+      Nombre
+      <br/>
+      <input type="text" name="nombre" value="" />
+      <br/>
+      <br/>
+
+      Apellidos
+      <br/>
+      <input type="text" name="apellidos" value="" size="35"/>
+      <br/>
+      <br/>
+
+      Contraseña
+      <br/>
+      <input type="password" name="contraseña" value="" />
+      <br/>
+      <br/>
+
+      Confirmar contraseña
+      <br/>
+      <input type="password" name="confirmarContraseña" value="" />
+      <br/>
+      <br/>
+
+      Identificación
+      <br/>
+      <select name="select">
+        <option value="CC">CC</option>
+        <option value="TI">TI</option>
+        <option value="CE">CE</option>
+      </select>
+      <input type="text" name="idsuj" value="" size="10" maxlength="9" />
+      <br/>
+      <br/>
+
+      Sexo
+      <br/>
+      <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre
+      <br/>
+      <input type="radio" name="sexo" value="mujer" checked="checked" /> Mujer
+      <br/>
+      <br/>
+
+      Incluir mi foto
+      <input type="file" name="foto" />
+      <br/>
+      <br/>
+
+      <fieldset>
+      <legend>Datos personales</legend>
+      <br/>
+      Departamento <br/>
+      <select name="-selecciona-">
+        <option value="Santander">Santander</option>
+        <option value="Amazonas" >Amazonas</option>
+        <option value="Antioquia">Antioquia</option>
+        <option value="Arauca">Arauca</option>
+        <option value="Atlántico" >Atlántico</option>
+        <option value="Bolívar">Bolívar</option>
+      </select>
+      <br/>
+      <br/>
+
+      Fecha de nacimiento <br/>
+      <input type="text" name="idsuj" value="" size="10" maxlength="9" />
+      de
+      <select name="select">
+        <option value="Enero">Enero</option>
+        <option value="Febrero" >Febrero</option>
+        <option value="Marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo" >Mayo</option>
+        <option value="Junio">Junio</option>
+        <option value="Julio">Julio</option>
+        <option value="Agosto" >Agosto</option>
+        <option value="Septiembre">Septiembre</option>
+        <option value="Octubre">Octubre</option>
+        <option value="Noviembre" >Noviembre</option>
+        <option value="Diciembre">Diciembre</option>
+      </select>
+      de
+      <input type="text" name="idsuj" value="" size="10" maxlength="9" />
+      <br/>
+      <br/>
+      Temas de interes <br/>
+      <style type="text/css">
+      #global {
+      	height: 80px;
+      	width: 200spx;
+      	border: 1px solid #ddd;
+      	background: #f1f1f1;
+      	overflow-y: scroll;
+      }
+      #mensajes {
+      	height: auto;
+      }
+      .texto {
+      	padding:4px;
+      	background:#fff;
+      }
+      </style>
+      <div id="global">
+        <div id="mensajes">
+          <div class="texto">Administracion de bases de datos</div>
+          <div class="texto">Analisis y programación</div>
+          <div class="texto">Arquitectura</div>
+          <div class="texto">Calidad</div>
+          <div class="texto">ERP, CRM, Business Intelligense</div>
+        </div>
+      </div>
+
+      <br/>
+      <br/>
+
+      <input type="submit" name="enviar" value="Guardar cambios" />
+      <input type="reset" name="limpiar" value="Borrar los datos introducidos" />
+      <br/>
+      <br/>
+
+    </form>
+
+  </body>
+
+<html/>
