@@ -1,0 +1,329 @@
+---
+title: "Tutorial R"
+author: 
+- "2182028-Jorge Luis Sandoval Anaya"
+- "2182815 Daniel Baez Acevedo"
+date: May 06, 2021
+output:
+ prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+
+# 1.Estuctura de control
+Se utilizan para controlar el flujo del programas
+ en una rutina o función.Estas estructuras permiten controlar, mediante una condición, la ejecución o no de una línea de código o conjunto de líneas.
+Las siguientes estructuras de control son las más conocidas y usadas de R.
+|Estructura de control|Descripcion|
+|---|---|
+|if|(si) es usado cuando deseamos que una operación se ejecute únicamente cuando una condición se cumple.|
+|else|sirve para indicar instrucciones a realizar en caso de no cumplirse la condición del if.|
+|for|nos permite ejecutar un bucle (loop), realizando una operación para cada elemento de un conjunto de datos.|
+|while|Este es un tipo de bucle que ocurre mientras una condición es verdadera (TRUE). La operación se realiza hasta que se se llega a cumplir un criterio previamente establecido.|
+|break|nos permite interrumpir un bucle|
+|next|nos deja avanzar a la siguiente iteración del bucle.|
+|repeat|Este es un bucle que se llevará a cabo el número de veces que especifiquemos.|
+
+# 2. Listas y vectores
+Un vector es la estructura de datos más sencilla en R. Un vector es una colección de uno o más datos del mismo tipo, es decir es una estructura homogénea.
+
+### 2.1 Creacion de vectores
+Para crear un vector debemos usar la función c() (combinar) y darle como argumento los elementos que deseamos combinar en el vector, separados por comas.
+###   Ejemplo
+```{r}
+#Vector numerico
+c(100,3456,4578,899)
+```
+
+
+```{r}
+#vector de texto
+c("Estadistica","Moda","Mediana","Media")
+```
+
+Si se desea agregar un dato a un vector ya existente, lo podemos hacer combinando dicho vector con el nuevo dato.
+```{r}
+vector_ejemplo <- c(1,2,3,4,5,6)
+vector_ejemplo <- c(vector_ejemplo,7)
+vector_ejemplo
+```
+Así mismo se puede crear un vector con la combinación de dos ya existentes.
+```{r}
+Ejemplo1 <- c(100,200,300)
+Ejemplo2 <- c(400,500,600)
+Ejemplo3 <- c(Ejemplo1,Ejemplo2)
+Ejemplo3
+
+```
+Al intentar realizar la combinación de vectores que tienen tipos de datos diferentes, R realiza coerción automáticamente dando origen a un 
+ vector del tipo de dato más flexible según las reglas de coerción.
+
+```{r}
+class(Ejemplo3)
+```
+ahora se agregara un dato de tipo de cadena de texto y se vera en uso las reglas de coercion.
+```{r}
+class(c(Ejemplo3,"Estadistica"))
+```
+También podemos crear vectores con secuencias numéricas utilizando ```:```. En el lado izquierdo de los dos puntos se coloca el numero(decimal, negativo o positivo) de inicio de dicha secuencia y en el lado derecho escribimos donde finalizara.
+```{r}
+#secuencia inicia en 10 y va hasta a 3
+c(10:34)
+```
+En R existen operaciones aritmética y relacionales que podemos aplicar a cada dato de un vector,a este proceso se le llama vectorización.
+
+```{r}
+#suma
+Ejemplo3+5
+```
+```{r}
+#multiplicacion
+Ejemplo3*8
+```
+```{r}
+#divicion
+Ejemplo3/2
+```
+
+Al aplicar operaciones relacionales se obtiene un vector lógico para cada uno de los elementos comparados
+```{r}
+#numeros mayor de 200
+Ejemplo3>200
+```
+```{r}
+#numeros menor de 200
+Ejemplo3<200
+```
+```{r}
+#numeros igual a 200
+Ejemplo3==200
+```
+
+### 2.2 Listas
+Las listas, al igual que los vectores, son estructuras de datos unidimensionales, solo tienen largo, pero a diferencia de los vectores cada uno de sus elementos puede ser de diferente tipo o incluso de diferente clase, por lo que son estructuras heterogéneas.
+### 2.21 Creacion de listas
+Para crear una lista es necesario usar la función ```list()```, la cual nos pedirá como argumentos los elementos que deseamos incluir en la nueva lista.Para esta estructura, no importan las dimensiones o largo de los elementos que queramos incluir en ella.
+
+### Ejemplo
+```{r}
+#vector de 1 a 10
+vector <- 1:10
+#matriz 
+matriz <- matrix(1:6, nrow=3)
+lista <- list("vector"=vector,"matriz"=matriz)
+lista
+```
+
+# 3.Funciones
+Para crear funciones en R debemos utilizar el comando ```function()``` con el cual se creara objetos de tipo function de la siguiente manera.
+```
+f <- function(<argumentos>)
+{
+    ## codigo de la funcion 
+}
+```
+
+Cuando le asignamos una función a un nombre decimos que hemos definido una función.
+ 
+ 
+Una vez que la función tiene nombre, podemos llamarla usando su nombre, al igual que con las funciones por defecto de R.
+
+```{r}
+f <- function(){
+  cat("Hola mundo")
+  
+}
+#llamando la funcion f
+f()
+```
+Toda función está compuesta de 3 partes las cuales veremos a continuación.
+|Parte|Descripcion|
+|---|---|
+|Nombre|Nos permite ejecutar  y hacer referencia sobre una funcion|
+|Argumentos|Son la variables que necesitan las funciones para poder realizar sus operaciones|
+|Cuerpo|Contiene todas las operaciones que se ejecutaran cuando la funcion sea llamada|
+
+
+# 4. Distribuciones de probabilidad en R
+
+A cada nombre de probabilidad dado por R se le agrega un prefijo ```d``` para obtener la función de densidad,```p``` para la función de distribución acumulada  y ```q``` para la función cuantil.La sintaxis de lo anterior es la siguiente.
+
+```
+ dname(x,.....) #evalua la funcion de densidad
+ pname(x,.....) #evalua la funcion de distribucion
+ qname(x,.....) #evalua la funcion cuantil
+```
+## Distribucion Beta
+
+### Funcion de densidad
+```{r}
+ curve(dbeta(x, shape1=1, shape2=5), lwd=3, las=1,
+      ylab='Densidad')
+```
+
+### Funcion de distribucion acumulada
+```{r}
+curve(pbeta(x, shape1=1, shape2=5),lwd=3,las=1,
+      ylab='D acumulada')
+```
+
+### Funcion cuantil
+```{r}
+curve(qbeta(x, shape1=1, shape2=5),lwd=3,las=1,
+      ylab='F Cuartil')
+```
+
+## Distribucion normal
+
+
+### Funcion de densidad
+```{r}
+ curve(dnorm(x, mean = 0, sd=1), lwd=3, las=1,
+      ylab='Densidad')
+```
+
+### Funcion de distribucion acumulada
+```{r}
+curve(pnorm(x, mean = 0, sd=1),lwd=3,las=1,
+      ylab='D acumulada')
+```
+
+### Funcion cuantil
+```{r}
+curve(qnorm(x, mean = 0, sd=1),lwd=3,las=1,
+      ylab='F Cuartil')
+```
+
+## Distribucion binomial
+
+### Funcion de densidad
+```{r}
+x <- seq(0,50,by=1)#secuencia de 50 numeros ordenados
+bin <- dbinom(x,size=50,prob=0.5)
+plot(x,bin)
+
+```
+
+### Funcion de distribucion acumulada
+```{r}
+x <- seq(0,50,by=1)#secuencia de 50 numeros ordenados
+bin <- pbinom(x,size=50,prob=0.5)
+plot(x,bin)
+
+```
+
+### Funcion cuantil
+
+```{r}
+qbinom(0.25,51,1/2)
+
+```
+
+## Distribucion de poisson
+
+### Funcion de densidad
+
+```{r}
+x <- 1:50
+plot(dpois(x,lambda = 5))
+```
+
+
+### Funcion de distribucion acumulada
+
+```{r}
+x <- 1:50
+y <- ppois(x,lambda = 5)
+plot(x,y)
+
+```
+
+### Funcion cuantil
+
+```{r}
+qpois(p=0.90,lambda=10)
+
+```
+
+# 5 Utilizando las funciones de distribución de probabilidad 
+### Tabla a
+```{r}
+Num <- seq(-3.4,3.4,by=0.1)
+NumH <- seq(0,0.09,by=0.01)
+Matriz <- array(0,c(69,10))
+colnames(Matriz) <- c("0.00","0.01","0.02","0.03","0.04","0.05","0.06","0.07",
+"0.08","0.09")
+
+for (x in 1:length(Num)) {
+
+    for (y in 1:length(NumH)) {
+  
+        if (Num[x] < 0) {
+      
+          Matriz[x,y] =pnorm(Num[x] - NumH[y],mean = 0,sd=1)
+    }
+    
+      else{
+    
+        Matriz[x,y] =pnorm(Num[x] + NumH[y],mean = 0,sd=1)
+    }
+  }
+}
+
+dataframe <- as.data.frame(Matriz)
+names(dataframe) <- c("0.00","0.01","0.02","0.03","0.04","0.05","0.06","0.07",
+                      "0.08","0.09")
+
+row.names(dataframe) <- c("-3.4","-3.3","-3.2","-3.1","-3.0","-2.9","-2.8","-2.7","-2.6","-2.5","-2.4","-2.3","-2.2","-2.1","-2.0","-1.9","-1.8",
+                          "-1.7","-1.6","-1.5","-1.4","-1.3","-1.2","-1.1","-1.0","-0.9","-0.8","-0.7","-0.6","-0.5","-0.4","-0.3","-0.2","-0.1"," 0.0"," 0.1"," 0.2",
+                          " 0.3"," 0.4"," 0.5"," 0.6"," 0.7"," 0.8"," 0.9"," 1.0"," 1.1"," 1.2"," 1.3"," 1.4"," 1.5"," 1.6"," 1.7"," 1.8"," 1.9"," 2.0"," 2.1"," 2.2"," 2.3",
+                          " 2.4"," 2.5"," 2.6"," 2.7"," 2.8"," 2.9"," 3.0"," 3.1"," 3.2"," 3.3"," 3.4")
+dataframe
+```
+
+### Tabla b
+```{r}
+c025<- qt(p = 0.25,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c02 <- qt(p = 0.2,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+
+ c01<- qt(p = 0.1,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c015 <- qt(p = 0.15,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+ c005 <- qt(p = 0.05,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c0025 <- qt(p = 0.025,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c002 <- qt(p = 0.02,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c001 <- qt(p = 0.01,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c0005 <- qt(p = 0.005,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c00025 <- qt(p = 0.0025,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c0001 <- qt(p = 0.001,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+c00005 <- qt(p = 0.0005,df = c(1:30,40,50,60,80,100,1000), lower.tail = F)
+tdist <- data.frame(c025,c02,c015,c01,c005,c0025,c002,c001,c0005,c00025,c0001,c00005)
+names(tdist) <- c("0.25","0.2","0.15","0.1","0.05","0.025","0.02","0.01","0.005","0.0025","0.001","0.0005")
+row.names(tdist) <- c("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","40","50","60","80","100","1000")
+tdist
+
+```
+### Tabla c
+```{r}
+chi025 <- qchisq(p = 0.25,df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi02 <- qchisq(p = 0.2, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi015 <- qchisq(p = 0.15, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi01 <- qchisq(p = 0.1, df = c(1:30,40,50,60,80,100),lower.tail = F) 
+chi005 <- qchisq(p = 0.05, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi0025 <- qchisq(p = 0.025, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi002 <- qchisq(p = 0.02, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi001 <- qchisq(p = 0.01, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi00005 <- qchisq(p = 0.005, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi00025 <- qchisq(p = 0.0025, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi0001 <- qchisq(p = 0.001, df = c(1:30,40,50,60,80,100),lower.tail = F)
+chi000005 <- qchisq(p = 0.0005, df = c(1:30,40,50,60,80,100),lower.tail = F)
+ x2dist <- data.frame(chi025,chi02,chi015,chi01,chi005,chi0025,chi002,chi001,chi00025,chi0001,chi00005,chi000005)
+names(x2dist) <- c("0.25","0.2","0.15","0.1","0.05","0.025","0.02","0.01","0.005","0.0025","0.001","0.0005")
+row.names(x2dist) <- c("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","40","50","60","80","100")
+x2dist
+
+```
+
+# 6
+
+
