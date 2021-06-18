@@ -1,0 +1,132 @@
+\documentclass[spanish,notitlepage,letterpaper, 12pt]{article} % para articulo en castellano
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel} % silabea palabras castellanas
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref} % navega por el doc
+\usepackage{graphicx}
+\usepackage{geometry}      % See geometry.pdf to learn the layout options.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{epstopdf}
+\usepackage{fancyhdr} % encabezados y pies de pg
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=shadowbox,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+  rulesepcolor=\color{blue}
+}
+
+\newcommand{\university}{\normalsize Universidad Industrial de Santander}
+\newcommand{\faculty}{\normalsize  Escuela de Ingenier\'ia de Sistemas e Inform\'atica}
+\newcommand{\codigo}{\normalsize  2182028}
+\newcommand{\grupo}{\normalsize  B2}
+\newcommand{\estudiante}{\normalsize  Jorge Sandoval}
+\pagestyle{fancy} 
+\chead{\bfseries Lab 5 } 
+\lhead{} % si se omite coloca el nombre de la seccion
+\rhead{\today} 
+\lfoot{\it  An\'alisis N\'umerico } 
+\cfoot{\university} 
+\rfoot{\thepage} 
+
+\voffset = -0.25in 
+\textheight = 8.0in 
+\textwidth = 6.5in
+\oddsidemargin = 0.in
+\headheight = 20pt 
+\headwidth = 6.5in
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0,5pt}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+\begin{document}
+
+\title{	\vspace{-12mm}\includegraphics[width=0.2\linewidth]{Logos/UIS.pdf}\\Informe Laboratorio: An\'alisis Num\'erico\\  \centering Pr\'actica No. 5}
+\author{
+\textbf{Estudiante:} \estudiante\\ \textbf{C\'odigo:} \codigo\\
+\textbf{Grupo:} \grupo\\
+\textit{\faculty}\\
+\textit{\university}}
+\date{\today}
+\maketitle
+
+\section*{3.2 Implementing}
+\textbf{C.}
+
+Se pudo observar que con la función  los valores de L y U son
+diferentes a los obtenidos por la función que  eso es debido a la diferencia de como se programo la ultima función
+por lo tanto se puede inferir que hay diferentes métodos para desarrollar dicho algoritmo.
+
+\section*{3.3 Interpreting}
+\textbf{A.}
+
+El sistema de ecuaciones formulado es :
+
+\\
+\begin{center}
+$
+\left.
+\begin{array}{rcl}
+     10P+15M+40G & = & 300
+  \\ P-M-G & = & 0
+  \\ M-2G & = & 0
+\end{array}
+\right\}
+$ 
+    
+\end{center}
+
+
+\textbf{C.}
+
+Sophia necesita vender 9 pequeñas , 6 medianas y 3 grandes.
+
+\section*{3.4 Interpreting}
+
+Papo desea conocer la edad actual de cada integrante de su familia,sabe que la suma de las edades actuales son 80,dentro de 22 años La edad de que el tiene sera la mitad de la edad de su madre,si el padre es un año mayor a a la esposa.Encontrar la edad actual de cada uno.
+\vspace{0.2cm}
+
+\textbf{Ecuación}
+
+\begin{center}
+$
+\left.
+\begin{array}{rcl}
+     10P+15M+40G & = & 300
+  \\ P-M-G & = & 0
+  \\ M-2G & = & 0
+\end{array}
+\right\}
+$ 
+    
+\end{center}
+\end{document}  
+
+
+
