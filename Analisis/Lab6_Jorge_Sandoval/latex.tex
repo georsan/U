@@ -1,0 +1,114 @@
+\documentclass[spanish,notitlepage,letterpaper, 12pt]{article} % para articulo en castellano
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel} % silabea palabras castellanas
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref} % navega por el doc
+\usepackage{graphicx}
+\usepackage{geometry}      % See geometry.pdf to learn the layout options.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{epstopdf}
+\usepackage{fancyhdr} % encabezados y pies de pg
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=shadowbox,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+  rulesepcolor=\color{blue}
+}
+
+\newcommand{\university}{\normalsize Universidad Industrial de Santander}
+\newcommand{\faculty}{\normalsize  Escuela de Ingenier\'ia de Sistemas e Inform\'atica}
+\newcommand{\codigo}{\normalsize  2182028}
+\newcommand{\grupo}{\normalsize  B2}
+\newcommand{\estudiante}{\normalsize  Jorge Sandoval}
+\pagestyle{fancy} 
+\chead{\bfseries Lab 6 } 
+\lhead{} % si se omite coloca el nombre de la seccion
+\rhead{\today} 
+\lfoot{\it  An\'alisis N\'umerico } 
+\cfoot{\university} 
+\rfoot{\thepage} 
+
+\voffset = -0.25in 
+\textheight = 8.0in 
+\textwidth = 6.5in
+\oddsidemargin = 0.in
+\headheight = 20pt 
+\headwidth = 6.5in
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0,5pt}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+\begin{document}
+
+\title{	\vspace{-12mm}\includegraphics[width=0.2\linewidth]{Logos/UIS.pdf}\\Informe Laboratorio: An\'alisis Num\'erico\\  \centering Pr\'actica No. 6}
+\author{
+\textbf{Estudiante:} \estudiante\\ \textbf{C\'odigo:} \codigo\\
+\textbf{Grupo:} \grupo\\
+\textit{\faculty}\\
+\textit{\university}}
+\date{\today}
+\maketitle
+
+\section*{3.2 Applying}
+
+\subsection*{A.} Sabiendo que $Y(x)=\sqrt{x}$, usando $x_0=1$, $x_1=1.25$, $x_2=1.5$ y $y_1=1$, $y_2=\sqrt{1.25}=1.1180$, $y_3=1.2247$. Tenemos que 
+
+\begin{equation}
+    P_2=1\frac{(x-1.25)(x-1.5)}{(1-1.25)(1-1.5)}+1.1180\frac{(x-1)(x-1.5)}{(1.25-1)(1.25-1.5)}+1.2247\frac{(x-1)(x-1.25)}{(1.5-1)(1.5-1.25)}
+\end{equation}
+Operando y factorizando la ecuacion (1) tenemos
+
+\begin{equation}
+    8.08321x^2-22.51915x+15.3
+\end{equation}
+\subsection*{B.}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+\hline
+x_k & f[x_k] & f[,]& f[,,]& f[,,,] \\
+\hline
+x_0=1.0 & 3.5 & - & - & - \\ 
+x_0=1.5 & 12 & 17 & - & - \\ 
+x_0=3.5 & 103 & 45.5 & 11.4 & - \\ 
+x_0=5.0 & 491.5 & 259 & 61 & 12.4 \\ 
+\hline
+\end{tabular}
+\end{center}
+$P_2(x)=3.5+17(x-1)+11.4(x-1)(x-1.5)+12.4(x-1)(x-1.5)(x-3.5)$
+\section*{3.3 Implementing}
+\subsection*{D.} 
+
+De las gráficas se puede observar que son similares por ende se puede inferir que dichos métodos son parecidos y que sus margen de error es pequeño.
+\end{document}  
+
+
+
+
