@@ -1,0 +1,119 @@
+\documentclass[spanish,notitlepage,letterpaper, 12pt]{article} % para articulo en castellano
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel} % silabea palabras castellanas
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref} % navega por el doc
+\usepackage{graphicx}
+\usepackage{geometry}      % See geometry.pdf to learn the layout options.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{epstopdf}
+\usepackage{fancyhdr} % encabezados y pies de pg
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=shadowbox,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+  rulesepcolor=\color{blue}
+}
+
+\newcommand{\university}{\normalsize Universidad Industrial de Santander}
+\newcommand{\faculty}{\normalsize  Escuela de Ingenier\'ia de Sistemas e Inform\'atica}
+\newcommand{\codigo}{\normalsize  2182028}
+\newcommand{\grupo}{\normalsize  B2}
+\newcommand{\estudiante}{\normalsize  Jorge Sandoval}
+\pagestyle{fancy} 
+\chead{\bfseries Lab 9 } 
+\lhead{} % si se omite coloca el nombre de la seccion
+\rhead{\today} 
+\lfoot{\it  An\'alisis N\'umerico } 
+\cfoot{\university} 
+\rfoot{\thepage} 
+
+\voffset = -0.25in 
+\textheight = 8.0in 
+\textwidth = 6.5in
+\oddsidemargin = 0.in
+\headheight = 20pt 
+\headwidth = 6.5in
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0,5pt}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+\begin{document}
+
+\title{	\vspace{-12mm}\includegraphics[width=0.2\linewidth]{Logos/UIS.pdf}\\Informe Laboratorio: An\'alisis Num\'erico\\  \centering Pr\'actica No. 9}
+\author{
+\textbf{Estudiante:} \estudiante\\ \textbf{C\'odigo:} \codigo\\
+\textbf{Grupo:} \grupo\\
+\textit{\faculty}\\
+\textit{\university}}
+\date{\today}
+\maketitle
+
+\section*{3.1 Applying}
+
+
+\subsection*{A.}
+
+$h=\dfrac{1}{4}$ \hspace{1cm} $\dfrac{b-a}{N-1}=\dfrac{1}{4}$ despejando para N tenemos que $N=5$.
+\begin{equation*}
+    \int_1^2 xln(x) dx=\int_1^1.25 xln(x)dx + \int_1.25^1.5 xln(x)dx + \int_1.5^1.75 xln(x)dx + \int_1.75^2 xln(x)dx
+\end{equation*}
+\begin{equation*}
+    \dfrac{h}{2}(f_0+f_1)+\dfrac{h}{2}(f_1+f_2)+\dfrac{h}{2}(f_2+f_3)+\dfrac{h}{2}(f_3+f_4)+\dfrac{h}{2}(f_4+f_5)
+\end{equation*}
+\begin{equation*}
+    =\dfrac{h}{2}(f_0+2f_1+2f_2+2f_3+f4)
+\end{equation*}
+\begin{equation*}
+    \frac{1}{8}(ln(1)+2(1.25)ln(1.25)+2(1.5)ln(1.5)+2(1.75)ln(1.75)+ln(2))=0.5532570
+\end{equation*}
+
+
+\subsection*{B.}
+tenemos que N=5 así que
+\begin{equation*}
+\frac{h}{3}(f_0+4f_1+2f_2+4f_3+f_4)=\dfrac{1}{12}(ln(1)+4(1.25)ln(1.25)+2(1.5)ln(1.5)+4(1.75)ln(1.75)+ln(2))
+\end{equation*}
+\begin{equation*}
+    =0.5784476
+\end{equation*}
+\section*{3.4 Proposing}
+\subsection{a.} Hallar el área limitada por la recta x + y = 10, el eje OX y las ordenadas de x=2 y x=8.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{Images/Captura de pantalla_2021-06-22_14-20-33.png}
+    \caption{grafica}
+\end{figure}
+
+\end{document}  
+
+
+

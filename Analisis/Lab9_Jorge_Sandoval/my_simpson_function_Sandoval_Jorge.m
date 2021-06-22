@@ -1,4 +1,4 @@
-function my_simpson_function_Sandoval_Jorge(fun,a,b,M )
+function[I]=my_simpson_function_Sandoval_Jorge(fun,a,b,M )
     h=(b-a)/M;
     s=fun(a)+fun(b);
     for i=1:2:M-1
@@ -8,5 +8,5 @@ function my_simpson_function_Sandoval_Jorge(fun,a,b,M )
         s=s+2*fun(a+i*h);
     end
     I=h/3*s;
-    disp(I)
+   
 end
