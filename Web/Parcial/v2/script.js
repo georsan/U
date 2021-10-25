@@ -21,11 +21,7 @@ if(edita==false){
 
     if (select=='bien') {
         var codigohtml='<td><input type="text" name="alimento"  value="'+alimento+'"></td>'+
-        '<td><input type="text" name="calorias"  value="'+calorias+'"></td>'+
-        '<td><input type="text" name="grasas"  value="'+grasas+'"></td>'+
-        '<td><input type="text" name="proteinas"  value="'+proteinas+'"></td>'+
-        '<td><input type="text" name="carbohidratos"  value="'+carbohidrato+'">'+
-        '<td><select id="select" onclick="valor()" ><option value="bien" selected>Bien</option><option value="mal">Mal</option></select></td></td><td><span>En edicion</span></td>'
+        '<td><input type="text" name="calorias"  value="'+calorias+'"></td>'+'<span>En edicion</span></td>'
         
     } else {
         var codigohtml='<td><input type="text" name="alimento"  value="'+alimento+'"></td>'+
